@@ -1,0 +1,17 @@
+<div class="footer">
+  <ng-icon
+    name="TablerBook"
+    (click)="handleChangePage('main')"
+    [ngClass]="{ selected: currentPage === 'main' }"
+  ></ng-icon>
+  <ng-icon
+    name="TablerBooks"
+    (click)="handleChangePage('bookshelf')"
+    [ngClass]="{ selected: currentPage === 'bookshelf' }"
+  ></ng-icon>
+  <ng-icon
+    name="TablerUser"
+    (click)="handleChangePage('profile')"
+    [ngClass]="{ selected: currentPage === 'profile' }"
+  ></ng-icon>
+</div>

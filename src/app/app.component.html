@@ -1,3 +1,9 @@
 <div>
-  <h1>Hello World</h1>
+  <ng-container [ngSwitch]="page">
+    <app-main *ngSwitchCase="'main'"></app-main>
+    <app-bookshelf *ngSwitchCase="'bookshelf'"></app-bookshelf>
+    <app-profile *ngSwitchCase="'profile'"></app-profile>
+  </ng-container>
+
+  <app-footer (changePage)="changePage($event)"></app-footer>
 </div>

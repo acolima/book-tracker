@@ -1,0 +1,23 @@
+@import "../../../scss/mixins";
+@import "../../../scss/theme";
+
+.footer {
+  width: 100%;
+  height: 60px;
+
+  position: fixed;
+  bottom: 0;
+
+  @include flex($justifyContent: space-around);
+
+  border-top: 1px solid $c-gray;
+
+  ng-icon {
+    font-size: 2em;
+    color: $c-gray;
+  }
+
+  ng-icon.selected {
+    color: $c-yellow;
+  }
+}
