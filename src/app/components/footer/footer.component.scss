@@ -10,11 +10,11 @@
 
   @include flex($justifyContent: space-around);
 
-  border-top: 1px solid $c-gray;
+  border-top: 2px solid $c-lightgrey;
 
   ng-icon {
     font-size: 2em;
-    color: $c-gray;
+    color: $c-grey;
   }
 
   ng-icon.selected {

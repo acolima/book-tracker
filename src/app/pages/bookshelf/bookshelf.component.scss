@@ -1,0 +1,53 @@
+@import "../../../scss/mixins";
+@import "../../../scss/theme";
+@import "../../../scss/variables";
+
+.bookshelf {
+  height: 100%;
+  width: 100%;
+
+  padding: 10px;
+  padding-bottom: 60px;
+
+  font-family: $font-primary;
+  color: $c-grey;
+
+  @include flex($direction: column, $alignItems: initial, $gap: 20px);
+
+  h1 {
+    color: $c-black;
+    border-bottom: 3px solid $c-lightgrey;
+  }
+
+  &__bookslist {
+    overflow: scroll;
+
+    flex: 1;
+    @include flex($direction: column, $alignItems: initial, $gap: 40px);
+
+    .list {
+      .title {
+        @include flex($justifyContent: space-between);
+        margin-bottom: 10px;
+
+        h2 {
+          color: $c-black;
+        }
+      }
+
+      .books {
+        overflow-y: scroll;
+
+        @include flex($gap: 15px);
+
+        .book {
+          img {
+            width: 100px;
+
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
